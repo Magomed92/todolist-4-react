@@ -28,7 +28,7 @@ h1 {
   background: #1a1a40;
   margin-top: 5rem;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .TodoForm {
@@ -37,6 +37,7 @@ h1 {
 }
 
 .todo-input {
+  border-radius: 8px;
   outline: none;
   background: none;
   border: 1px solid #8758ff;
@@ -52,6 +53,8 @@ h1 {
 }
 
 .todo-btn {
+  border-radius: 8px;
+  margin-left: 10px;
   background: #8758ff;
   color: #fff;
   border: none;
@@ -85,7 +88,17 @@ h1 {
   cursor: pointer;
 }
 
-.edit-icon,
 .delete-icon {
   cursor: pointer;
+  transition: 0.3s linear;
+}
+.edit-icon {
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.delete-icon:hover {
+  color: red;
+}
+.edit-icon:hover {
+  color: greenyellow;
 }

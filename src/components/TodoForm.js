@@ -4,7 +4,10 @@ export const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo(value);
+
+    if (value === "") {
+      alert("Введите текст!!!");
+    } else addTodo(value);
     setValue("");
   };
   return (
@@ -13,7 +16,7 @@ export const TodoForm = ({ addTodo }) => {
         type="text"
         className="todo-input"
         value={value}
-        placeholder="Введите вашу задачу...."
+        placeholder="Введите вашу задачу....!!!"
         onChange={(e) => setValue(e.target.value)}
       />
       <button type="submit" className="todo-btn">
